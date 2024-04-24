@@ -1,20 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { google } from 'googleapis';
-
-//sit
-//1sMYN_4c4L_BWq-EIrMm54PiR8lClxIhNOmbV6pYOM4Q
-//personal
-//14gpW_wA1gDvAGrCPzi6Lfb305RjI-PU5C4oMk6ifwfw
-
-//Keyfilename must be a json document from google cloud project
-const auth = new google.auth.GoogleAuth({
-    keyFilename: 'sit-credentials.json',
-    scopes: [
-        'https://www.googleapis.com/auth/spreadsheets',
-        'https://www.googleapis.com/auth/drive',
-        'https://www.googleapis.com/auth/drive.file',
-    ]
-})
+import { auth } from '../../utils/authGoogle'
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 

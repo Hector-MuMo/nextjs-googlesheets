@@ -6,13 +6,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     try {
         const sheets = google.sheets({ version: 'v4', auth });
-        const response = await sheets.spreadsheets.values.get({
+        const response = await sheets.spreadsheets.developerMetadata.search({
             spreadsheetId: process.env.SPREADSHEET_ID,
-            range: 'A1:E100'
         })
 
-        return res.status(200).send(response.data.values);
+        return res.status(200).send(response);
     } catch (error) {
         console.log(error)
     }
-}; 
+};
+
+//spreadsheetId: process.env.SPREADSHEET_ID,
