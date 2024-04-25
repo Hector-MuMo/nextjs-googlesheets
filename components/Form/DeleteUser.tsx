@@ -1,5 +1,5 @@
-import Button from "./Button";
-import InputForm from "./InputForm";
+import Button from "../Input/Button";
+import InputForm from "../Input/InputForm";
 
 type DeleteUserProps = {
     setFormData: any,

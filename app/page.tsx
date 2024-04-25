@@ -1,9 +1,9 @@
 'use client'
 
-import AddUser from "@/components/AddUser";
+import AddUser from "@/components/Form/AddUser";
 import DataTable from "@/components/DataTable";
-import DeleteUser from "@/components/DeleteUser";
-import UpdateUser from "@/components/updateUser";
+import DeleteUser from "@/components/Form/DeleteUser";
+import UpdateUser from "@/components/Form/UpdateUser";
 import { deleteData, fetchData, postData, updateData } from "@/utils/crudSheetData";
 import { useEffect, useState } from "react";
 
